@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    <item android:drawable="@drawable/radio_btn_selected" android:state_checked="false" />-->
+    <!--    <item android:drawable="@drawable/selected_menu_bg" android:state_checked="true" />-->
+
+    <item android:drawable="@drawable/selected_menu" android:state_activated="true" />
+
+    <item android:drawable="@drawable/selected_menu" android:state_focused="true" />
+
+    <!-- default -->
+    <item android:drawable="@color/transparent" />
+</selector>

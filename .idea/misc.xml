@@ -7,6 +7,17 @@
         <entry key="..\:/AndroidTvDevelopment/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/AndroidTvDevelopment/app/src/main/res/layout/fragment_list.xml" value="0.512" />
         <entry key="..\:/AndroidTvDevelopment/app/src/main/res/layout/item_view.xml" value="0.1" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/drawable/selected_menu.xml" value="0.196" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/drawable/selector_menu.xml" value="0.196" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/layout/activity_main.xml" value="0.38515625" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/layout/fragment_genres.xml" value="0.40234375" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/layout/fragment_language.xml" value="0.40234375" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/layout/fragment_movies.xml" value="0.40234375" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/layout/fragment_search.xml" value="0.40234375" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/layout/fragment_settings.xml" value="0.40234375" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/layout/fragment_sports.xml" value="0.40234375" />
+        <entry key="..\:/MyFolder/AndroidTvDevelopment/app/src/main/res/layout/fragment_tvshows.xml" value="0.40234375" />
       </map>
     </option>
   </component>
