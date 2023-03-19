@@ -1,5 +1,6 @@
 package com.tutorial.tvapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -61,6 +62,11 @@ class HomeFragment : Fragment() {
             updateBanner(it)
         }
 
+         listFragment.setOnItemClickListener {
+             val intent  = Intent(requireContext(), DetailActivity::class.java)
+             intent.putExtra("id", it.id)
+             startActivity(intent)
+         }
     }
 
     fun updateBanner(dataList: DataModel.Result.Detail) {
@@ -71,5 +77,4 @@ class HomeFragment : Fragment() {
         val url = "https://www.themoviedb.org/t/p/w780" + dataList.backdrop_path
         Glide.with(this).load(url).into(imgBanner)
     }
-
 }
