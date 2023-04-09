@@ -16,4 +16,7 @@ object Constants {
     const val INTENT_MENU = "menu"
     const val SELECTED_ID = "id"
 
+
+    const val API_KEY = "Paste Your Key Here"
+
 }
