@@ -2,6 +2,7 @@ package com.tutorial.tvapp
 
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.tutorial.tvapp.databinding.ActivityDetailBinding
 import com.tutorial.tvapp.model.DetailResponse
+import com.tutorial.tvapp.utils.Common
+import com.tutorial.tvapp.utils.Common.Companion.isEllipsized
 import com.tutorial.tvapp.viewmodel.DetailViewmodel
 import com.tutorial.tvapp.viewmodel.DetailViewmodelFactory
 
@@ -84,17 +87,31 @@ class DetailActivity : FragmentActivity() {
         transaction.commit()
     }
 
-    private fun setData(it: DetailResponse?) {
+    private fun setData(response: DetailResponse?) {
 
-        binding.title.text = it?.title ?: ""
-        binding.subtitle.text = getSubtitle(it)
-        binding.description.text = it?.overview ?: ""
+        binding.title.text = response?.title ?: ""
+        binding.subtitle.text = getSubtitle(response)
+        binding.description.text = response?.overview ?: ""
 
-
-        val path = "https://www.themoviedb.org/t/p/w780" + (it?.backdrop_path ?: "")
+        val path = "https://www.themoviedb.org/t/p/w780" + (response?.backdrop_path ?: "")
         Glide.with(this)
             .load(path)
             .into(binding.imgBanner)
+
+        binding.description.isEllipsized { isEllipsized ->
+            binding.showMore.visibility = if (isEllipsized) View.VISIBLE else View.GONE
+
+            binding.showMore.setOnClickListener {
+
+                Common.descriptionDialog(
+                    this,
+                    response?.title,
+                    getSubtitle(response),
+                    response?.overview.toString()
+                )
+
+            }
+        }
     }
 
     fun getSubtitle(response: DetailResponse?): String {

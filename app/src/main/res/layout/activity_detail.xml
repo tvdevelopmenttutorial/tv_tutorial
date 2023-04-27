@@ -100,6 +100,21 @@
             app:layout_constraintWidth_percent=".42" />
 
         <TextView
+            android:id="@+id/show_more"
+            app:layout_constraintStart_toEndOf="@+id/description"
+            app:layout_constraintBottom_toBottomOf="@+id/description"
+            android:nextFocusDown="@id/play"
+            android:textColor="@color/color_white"
+            android:focusable="true"
+            android:clickable="true"
+            android:text="Show more"
+            android:textSize="13sp"
+            android:padding="1dp"
+            android:background="@drawable/btn_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
             android:id="@+id/play"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
